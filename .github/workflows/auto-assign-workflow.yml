@@ -3,6 +3,9 @@ on:
   pull_request:
     types: [opened, ready_for_review, synchronize]
 
+permissions:
+  contents: read
+
 jobs:
   add-reviews:
     runs-on: ubuntu-latest
