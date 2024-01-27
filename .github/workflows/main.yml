@@ -35,7 +35,7 @@ jobs:
         run: |
             mkdir /home/runner/work/_temp/_github_home
             cd /home/runner/work/_temp/_github_home
-            echo "[npmAuth.\"secrets.UPM_HOST"]" >> .upmconfig.toml
+            echo "[npmAuth.\"${{secrets.UPM_HOST}}\"]" >> .upmconfig.toml
             echo "alwaysAuth = true" >> .upmconfig.toml
             echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
       # Build
