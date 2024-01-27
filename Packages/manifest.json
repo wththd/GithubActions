@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "com.unity.test-framework": "1.1.33",
+    "com.unity.textmeshpro": "3.0.7",
+    "com.unity.ugui": "1.0.0",
+    "ru.publishing1c.moon.core": "1.0.13",
+    "ru.publishing1c.moon.navigation": "1.0.5",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -31,5 +36,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "MoonFramework",
+      "url": "http://146.185.208.21:4873",
+      "scopes": [
+        "ru.publishing1c"
+      ]
+    }
+  ]
 }

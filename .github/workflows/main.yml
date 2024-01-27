@@ -31,7 +31,15 @@ jobs:
       #  with:
       #    githubToken: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create .upmconfig.toml UPM authentication file
+        run: |
+            mkdir /home/runner/work/_temp/_github_home
+            cd /home/runner/work/_temp/_github_home
+            echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+            echo "alwaysAuth = true" >> .upmconfig.toml
+            echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
       # Build
+      
       - name: Build project
         uses: game-ci/unity-builder@v4
         env:
@@ -39,7 +47,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: StandaloneWindows64
 
       # Output
       - uses: actions/upload-artifact@v3

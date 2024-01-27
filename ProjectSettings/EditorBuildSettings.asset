@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Packages/ru.publishing1c.moon.navigation/Samples/Scenes/NavigationScene.unity
+    guid: caf52c84096e11b449b24a24d0b81764
   m_configObjects: {}
